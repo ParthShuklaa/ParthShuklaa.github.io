@@ -1,403 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Azure Hosted Web App</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-        --azure: #0078D4;
-        --azure-light: #50B0FF;
-        --azure-dark: #005A9E;
-        --dot-net: #512BD4;
-        --bg: #0A0E1A;
-        --surface: #111827;
-        --surface-2: #1A2235;
-        --border: rgba(255,255,255,0.07);
-        --text: #F0F4FF;
-        --muted: #7A8BA8;
-        --accent: #00D4AA;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parth Shukla — Technology Consultant & SME</title>
+<meta name="description" content="Parth Shukla — Subject Matter Expert & Technology Program Leader in Full Stack, Cloud, Data Engineering, and AI. Available for B2B consulting, enterprise learning design, and strategic partnerships." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0D1117;
+    --ink-2: #1C2333;
+    --ink-3: #2A3548;
+    --gold: #C8A96E;
+    --gold-light: #E8CFA0;
+    --gold-pale: rgba(200,169,110,0.12);
+    --cream: #F5F0E8;
+    --muted: #6B7A99;
+    --border: rgba(255,255,255,0.06);
+    --text: #E8EDF5;
+    --text-dim: #8A97B0;
+    --azure: #3D9BE9;
+    --green: #3ECFA8;
+  }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
-    body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'DM Sans', sans-serif;
-        overflow-x: hidden;
-        min-height: 100vh;
-    }
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    .grid-bg {
-        position: fixed;
-        inset: 0;
-        background-image:
-            linear-gradient(rgba(0,120,212,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,120,212,0.06) 1px, transparent 1px);
-        background-size: 48px 48px;
-        pointer-events: none;
-        z-index: 0;
-    }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.4;
+  }
 
-    .glow-orb {
-        position: fixed;
-        width: 600px;
-        height: 600px;
-        border-radius: 50%;
-        filter: blur(120px);
-        pointer-events: none;
-        z-index: 0;
-    }
-    .orb-1 { background: rgba(0,120,212,0.15); top: -200px; right: -100px; }
-    .orb-2 { background: rgba(81,43,212,0.1); bottom: -200px; left: -100px; }
-    .orb-3 { background: rgba(0,212,170,0.07); top: 50%; left: 40%; }
+  .grid-overlay {
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none; z-index: 0;
+  }
 
-    .page-wrapper {
-        position: relative;
-        z-index: 1;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 48px 24px 80px;
-    }
+  .orb { position: fixed; border-radius: 50%; filter: blur(130px); pointer-events: none; z-index: 0; }
+  .orb-1 { width: 700px; height: 700px; background: rgba(200,169,110,0.08); top: -300px; right: -200px; }
+  .orb-2 { width: 500px; height: 500px; background: rgba(61,155,233,0.07); bottom: 10%; left: -150px; }
+  .orb-3 { width: 400px; height: 400px; background: rgba(62,207,168,0.05); top: 50%; right: 10%; }
 
-    .hero {
-        text-align: center;
-        padding: 60px 0 56px;
-        animation: fadeUp 0.7s ease both;
-    }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(13,17,23,0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Instrument Serif', serif; font-size: 1.2rem; color: var(--gold-light); text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-dim); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta { background: var(--gold); color: var(--ink); padding: 9px 20px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-    .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(0,120,212,0.12);
-        border: 1px solid rgba(0,120,212,0.3);
-        border-radius: 100px;
-        padding: 6px 16px;
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--azure-light);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 28px;
-    }
-    .badge-dot {
-        width: 6px; height: 6px;
-        border-radius: 50%;
-        background: var(--azure-light);
-        animation: pulse 2s infinite;
-    }
+  .wrapper { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 0 32px; }
 
-    .hero h1 {
-        font-family: 'Syne', sans-serif;
-        font-size: clamp(2rem, 5vw, 3.2rem);
-        font-weight: 800;
-        line-height: 1.15;
-        letter-spacing: -0.02em;
-        margin-bottom: 20px;
-        background: linear-gradient(135deg, #fff 0%, var(--azure-light) 60%, var(--accent) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+  /* HERO */
+  #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
 
-    .hero p {
-        font-size: 1.05rem;
-        color: var(--muted);
-        max-width: 560px;
-        margin: 0 auto 32px;
-        line-height: 1.7;
-        font-weight: 300;
-    }
+  .hero-inner {
+    display: grid; grid-template-columns: 1fr 340px; gap: 64px;
+    align-items: center; width: 100%;
+    animation: fadeUp 0.8s ease both;
+  }
 
-    .hero-actions {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+  }
+  .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
 
-    .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--azure);
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-        transition: background 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--azure-dark); transform: translateY(-1px); }
+  .hero-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(3rem, 6vw, 5.2rem);
+    font-weight: 400; line-height: 1.05; letter-spacing: -0.01em;
+    color: var(--text); margin-bottom: 12px;
+  }
+  .hero-name em { font-style: italic; color: var(--gold-light); }
 
-    .btn-ghost {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: transparent;
-        border: 1px solid var(--border);
-        color: var(--muted);
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 0.9rem;
-        transition: border-color 0.2s, color 0.2s, transform 0.15s;
-    }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--text); transform: translateY(-1px); }
+  .hero-title { font-size: 1rem; font-weight: 500; color: var(--text-dim); margin-bottom: 28px; line-height: 1.5; }
 
-    .divider {
-        height: 1px;
-        background: var(--border);
-        margin: 0 0 48px;
-    }
+  .hero-desc { font-size: 1.05rem; color: var(--text-dim); font-weight: 300; line-height: 1.8; max-width: 520px; margin-bottom: 40px; }
 
-    .section-label {
-        font-family: 'Syne', sans-serif;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--azure-light);
-        margin-bottom: 24px;
-    }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-    .steps-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 16px;
-        margin-bottom: 48px;
-    }
+  .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--ink); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
 
-    .step-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 24px;
-        position: relative;
-        overflow: hidden;
-        transition: border-color 0.2s, transform 0.2s;
-        animation: fadeUp 0.6s ease both;
-    }
-    .step-card:hover {
-        border-color: rgba(0,120,212,0.35);
-        transform: translateY(-2px);
-    }
-    .step-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(0,120,212,0.04) 0%, transparent 60%);
-        pointer-events: none;
-    }
+  .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(200,169,110,0.3); color: var(--gold-light); padding: 13px 28px; border-radius: 7px; font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+  .btn-outline:hover { border-color: var(--gold); background: var(--gold-pale); transform: translateY(-2px); }
 
-    .step-number {
-        font-family: 'Syne', sans-serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        color: var(--azure);
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
+  /* AVATAR CARD */
+  .avatar-card {
+    background: var(--ink-2); border: 1px solid rgba(200,169,110,0.15);
+    border-radius: 20px; padding: 36px 28px; text-align: center;
+    position: relative; overflow: hidden;
+    animation: fadeUp 0.9s ease 0.15s both;
+  }
+  .avatar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 
-    .step-title {
-        font-family: 'Syne', sans-serif;
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--text);
-        margin-bottom: 8px;
-    }
+  .avatar-initials {
+    width: 88px; height: 88px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--ink);
+    margin: 0 auto 16px;
+  }
+  .avatar-name { font-family: 'Instrument Serif', serif; font-size: 1.25rem; color: var(--text); margin-bottom: 4px; }
+  .avatar-role { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 20px; }
 
-    .step-desc {
-        font-size: 0.85rem;
-        color: var(--muted);
-        line-height: 1.6;
-        font-weight: 300;
-    }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+  .stat { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 14px 10px; }
+  .stat-val { font-family: 'Instrument Serif', serif; font-size: 1.6rem; color: var(--gold-light); line-height: 1; margin-bottom: 3px; }
+  .stat-label { font-size: 0.72rem; color: var(--text-dim); font-weight: 500; letter-spacing: 0.04em; }
 
-    .step-icon {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 32px;
-        height: 32px;
-        background: rgba(0,120,212,0.1);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px;
-    }
+  .avail-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(62,207,168,0.1); border: 1px solid rgba(62,207,168,0.25); border-radius: 100px; padding: 7px 14px; font-size: 0.78rem; color: var(--green); font-weight: 500; }
+  .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
 
-    .tech-row {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-bottom: 48px;
-    }
+  /* SECTIONS */
+  section { padding: 96px 0; }
 
-    .chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        background: var(--surface-2);
-        border: 1px solid var(--border);
-        border-radius: 100px;
-        padding: 7px 14px;
-        font-size: 0.82rem;
-        color: var(--muted);
-        font-weight: 400;
-    }
-    .chip-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .section-tag::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
 
-    .footer-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 32px 36px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        flex-wrap: wrap;
-        animation: fadeUp 0.8s ease both;
-    }
+  .section-title { font-family: 'Instrument Serif', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
 
-    .author-label {
-        font-size: 0.75rem;
-        color: var(--muted);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 4px;
-    }
-    .author-name {
-        font-family: 'Syne', sans-serif;
-        font-size: 1.4rem;
-        font-weight: 800;
-        background: linear-gradient(90deg, var(--text), var(--azure-light));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+  .section-sub { font-size: 1rem; color: var(--text-dim); font-weight: 300; max-width: 540px; line-height: 1.7; margin-bottom: 56px; }
 
-    .footer-thanks {
-        font-size: 0.88rem;
-        color: var(--muted);
-        max-width: 360px;
-        line-height: 1.6;
-        font-weight: 300;
-    }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent); margin: 0; }
 
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(18px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.4; }
-    }
+  /* SERVICES */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-    .step-card:nth-child(1) { animation-delay: 0.05s; }
-    .step-card:nth-child(2) { animation-delay: 0.12s; }
-    .step-card:nth-child(3) { animation-delay: 0.19s; }
-    .step-card:nth-child(4) { animation-delay: 0.26s; }
-    .step-card:nth-child(5) { animation-delay: 0.33s; }
-  </style>
+  .service-card {
+    background: var(--ink-2); border: 1px solid var(--border);
+    border-radius: 16px; padding: 30px 26px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.25s, transform 0.2s;
+    animation: fadeUp 0.6s ease both;
+  }
+  .service-card:hover { border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
+  .service-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(200,169,110,0.04) 0%, transparent 60%); pointer-events: none; }
+
+  .service-icon { font-size: 26px; margin-bottom: 16px; display: block; }
+  .service-name { font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--text); margin-bottom: 10px; }
+  .service-desc { font-size: 0.85rem; color: var(--text-dim); line-height: 1.7; font-weight: 300; }
+
+  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tag { font-size: 0.72rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 100px; padding: 3px 10px; color: var(--text-dim); font-weight: 500; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), transparent); }
+
+  .tl-item { position: relative; padding-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  .tl-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); border: 2px solid var(--ink); box-shadow: 0 0 0 3px rgba(200,169,110,0.2); }
+
+  .tl-period { font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .tl-role { font-family: 'Instrument Serif', serif; font-size: 1.15rem; color: var(--text); margin-bottom: 2px; }
+  .tl-company { font-size: 0.85rem; color: var(--azure); font-weight: 500; margin-bottom: 12px; }
+  .tl-desc { font-size: 0.88rem; color: var(--text-dim); font-weight: 300; line-height: 1.75; }
+  .tl-desc ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .tl-desc li { display: flex; gap: 10px; align-items: flex-start; }
+  .tl-desc li::before { content: '→'; color: var(--gold); flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
+
+  /* SKILLS */
+  .skills-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .skill-group-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { background: var(--ink-2); border: 1px solid rgba(200,169,110,0.15); border-radius: 100px; padding: 7px 16px; font-size: 0.82rem; color: var(--text-dim); transition: border-color 0.2s, color 0.2s; }
+  .pill:hover { border-color: var(--gold); color: var(--gold-light); }
+  .pill.highlight { border-color: rgba(200,169,110,0.4); color: var(--gold-light); background: var(--gold-pale); }
+
+  /* CERTIFICATIONS */
+  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cert-card { background: var(--ink-2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s, transform 0.2s; }
+  .cert-card:hover { border-color: rgba(200,169,110,0.25); transform: translateY(-2px); }
+  .cert-issuer { font-size: 0.72rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .cert-name { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.4; }
+
+  /* CONTACT */
+  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; }
+  .form-group input, .form-group textarea, .form-group select { background: var(--ink-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; color: var(--text); font-family: 'Cabinet Grotesk', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: rgba(200,169,110,0.4); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-group select option { background: var(--ink-2); }
+
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px; background: var(--ink-2); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
+  .contact-item:hover { border-color: rgba(200,169,110,0.3); transform: translateX(4px); }
+  .contact-item-icon { font-size: 20px; flex-shrink: 0; }
+  .contact-item-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 2px; }
+  .contact-item-val { font-size: 0.9rem; color: var(--text); }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 40px 0; }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-name { font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--gold-light); }
+  .footer-copy { font-size: 0.8rem; color: var(--text-dim); }
+  .footer-socials { display: flex; gap: 12px; }
+  .social-btn { width: 36px; height: 36px; border-radius: 8px; background: var(--ink-2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-dim); text-decoration: none; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .service-card:nth-child(1) { animation-delay: 0.05s; }
+  .service-card:nth-child(2) { animation-delay: 0.12s; }
+  .service-card:nth-child(3) { animation-delay: 0.19s; }
+  .service-card:nth-child(4) { animation-delay: 0.26s; }
+  .service-card:nth-child(5) { animation-delay: 0.33s; }
+  .service-card:nth-child(6) { animation-delay: 0.40s; }
+  .tl-item:nth-child(1) { animation-delay: 0.1s; }
+  .tl-item:nth-child(2) { animation-delay: 0.2s; }
+  .tl-item:nth-child(3) { animation-delay: 0.3s; }
+  .tl-item:nth-child(4) { animation-delay: 0.4s; }
+
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .wrapper { padding: 0 20px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .avatar-card { max-width: 340px; margin: 0 auto; }
+    .services-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: 1fr 1fr; }
+    .skills-layout { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
 <body>
 
-<div class="grid-bg"></div>
-<div class="glow-orb orb-1"></div>
-<div class="glow-orb orb-2"></div>
-<div class="glow-orb orb-3"></div>
+<div class="grid-overlay"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-<div class="page-wrapper">
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Parth Shukla</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a Call →</a>
+</nav>
 
-  <section class="hero">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Azure Hosted · ASP.NET Core
-    </div>
-    <h1>My Azure Hosted<br />Web Application</h1>
-    <p>
-      Built with ASP.NET Core and deployed to Microsoft Azure —
-      explore how to scaffold, develop, and ship modern web apps to the cloud.
-    </p>
-    <div class="hero-actions">
-      <a href="https://learn.microsoft.com/aspnet/core" target="_blank" class="btn-primary">
-        📖 ASP.NET Core Docs
-      </a>
-      <a href="https://portal.azure.com" target="_blank" class="btn-ghost">
-        ☁️ Azure Portal →
-      </a>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <p class="section-label">Deployment Walkthrough</p>
-
-  <div class="steps-grid">
-    <div class="step-card">
-      <div class="step-icon">🛠️</div>
-      <div class="step-number">Step 01</div>
-      <div class="step-title">Create the Project</div>
-      <p class="step-desc">Scaffold a new ASP.NET Core Web Application using the Visual Studio template or the <code>.NET CLI</code>.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-icon">⚙️</div>
-      <div class="step-number">Step 02</div>
-      <div class="step-title">Build Your App</div>
-      <p class="step-desc">Add controllers, views, Razor Pages, or Blazor components along with any required services and middleware.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-icon">🧪</div>
-      <div class="step-number">Step 03</div>
-      <div class="step-title">Test Locally</div>
-      <p class="step-desc">Run and validate the application locally with <code>dotnet run</code> to confirm it behaves as expected before publishing.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-icon">🚀</div>
-      <div class="step-number">Step 04</div>
-      <div class="step-title">Publish to Azure</div>
-      <p class="step-desc">Deploy using Visual Studio's Publish wizard or the <code>az webapp up</code> command via the Azure CLI.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-icon">📊</div>
-      <div class="step-number">Step 05</div>
-      <div class="step-title">Monitor &amp; Manage</div>
-      <p class="step-desc">Track performance, logs, and scaling in the Azure Portal or using Application Insights for full observability.</p>
+<!-- HERO -->
+<section id="hero">
+  <div class="wrapper">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Available for Consulting &amp; Partnerships</div>
+        <h1 class="hero-name">Parth<br /><em>Shukla</em></h1>
+        <p class="hero-title">Subject Matter Expert &amp; Technology Program Leader<br />Full Stack · Cloud · Data Engineering · GenAI</p>
+        <p class="hero-desc">10+ years helping enterprises and SMEs build scalable technology capabilities — from cloud-first architecture and AI adoption to outcome-driven learning programs. Based in Greater Delhi, serving clients globally.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-gold">Start a Conversation →</a>
+          <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="btn-outline">View LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <div class="avatar-initials">PS</div>
+        <div class="avatar-name">Parth Shukla</div>
+        <div class="avatar-role">SME &amp; Program Leader · Great Learning</div>
+        <div class="stat-row">
+          <div class="stat"><div class="stat-val">10+</div><div class="stat-label">Years Experience</div></div>
+          <div class="stat"><div class="stat-val">3</div><div class="stat-label">Core Domains</div></div>
+          <div class="stat"><div class="stat-val">B2B</div><div class="stat-label">Enterprise Focus</div></div>
+          <div class="stat"><div class="stat-val">AI</div><div class="stat-label">Specialisation</div></div>
+        </div>
+        <div class="avail-badge"><span class="avail-dot"></span>Open to new engagements</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <p class="section-label">Built With</p>
-  <div class="tech-row">
-    <span class="chip"><span class="chip-dot" style="background:#512BD4"></span>.NET 8</span>
-    <span class="chip"><span class="chip-dot" style="background:#0078D4"></span>Azure App Service</span>
-    <span class="chip"><span class="chip-dot" style="background:#00D4AA"></span>ASP.NET Core MVC</span>
-    <span class="chip"><span class="chip-dot" style="background:#F25022"></span>Visual Studio 2022</span>
-    <span class="chip"><span class="chip-dot" style="background:#0078D4"></span>Azure CLI</span>
-  </div>
+<div class="divider"></div>
 
-  <div class="divider"></div>
-
-  <div class="footer-card">
-    <div class="author-block">
-      <div class="author-label">Created by</div>
-      <div class="author-name">Parth Shukla</div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrapper">
+    <div class="section-tag">What I Do</div>
+    <h2 class="section-title">Services for <em>B2B SMEs</em></h2>
+    <p class="section-sub">Strategic technology consulting, AI-enabled capability building, and enterprise learning programs that translate into measurable business outcomes.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">☁️</span>
+        <div class="service-name">Cloud Architecture &amp; Azure</div>
+        <p class="service-desc">Design and implement scalable Azure-based solutions — App Service, DevOps pipelines, migrations, and cloud-native modernisation for SMEs.</p>
+        <div class="service-tags"><span class="tag">Azure</span><span class="tag">Cloud Migration</span><span class="tag">DevOps</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🤖</span>
+        <div class="service-name">GenAI &amp; AI Adoption</div>
+        <p class="service-desc">Hands-on AI adoption strategies — GitHub Copilot integration, GenAI for developers, TDD automation, and responsible AI frameworks for your teams.</p>
+        <div class="service-tags"><span class="tag">GenAI</span><span class="tag">AI Agents</span><span class="tag">Copilot</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎓</span>
+        <div class="service-name">Enterprise Learning Design</div>
+        <p class="service-desc">End-to-end learning journey design — curriculum strategy, SME alignment, assessments, and outcome frameworks that tie training to business KPIs.</p>
+        <div class="service-tags"><span class="tag">L&amp;D Strategy</span><span class="tag">Upskilling</span><span class="tag">EdTech</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏗️</span>
+        <div class="service-name">Full Stack Consulting</div>
+        <p class="service-desc">Technical advisory for Full Stack projects — ASP.NET Core, web app architecture, code reviews, and developer productivity improvement programs.</p>
+        <div class="service-tags"><span class="tag">ASP.NET Core</span><span class="tag">Web Apps</span><span class="tag">Architecture</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📊</span>
+        <div class="service-name">Data Engineering Advisory</div>
+        <p class="service-desc">Data strategy and engineering support — pipelines, Databricks, and building data-ready organisations for SMEs entering AI-led transformation.</p>
+        <div class="service-tags"><span class="tag">Databricks</span><span class="tag">Data Pipelines</span><span class="tag">Analytics</span></div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🤝</span>
+        <div class="service-name">Strategic Partnerships</div>
+        <p class="service-desc">Open to co-delivery partnerships with EdTech platforms, training firms, and technology companies looking for an experienced SME and program lead.</p>
+        <div class="service-tags"><span class="tag">B2B Partnerships</span><span class="tag">Co-Delivery</span><span class="tag">SME</span></div>
+      </div>
     </div>
-    <p class="footer-thanks">
-      Thanks for your time — I hope this walkthrough helps you get started
-      building and deploying your own web app on Azure. Happy coding! 🎉
-    </p>
   </div>
+</section>
 
-</div>
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrapper">
+    <div class="section-tag">Career</div>
+    <h2 class="section-title">A Decade of <em>Enterprise Impact</em></h2>
+    <p class="section-sub">From Microsoft's student partner network to leading enterprise-scale programs at Great Learning — a consistent track record of technology and talent transformation.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-period">Feb 2023 – Present · 3 yrs</div>
+        <div class="tl-role">SME &amp; Program Leader — Full Stack, Data Engineering &amp; AI</div>
+        <div class="tl-company">Great Learning · Gurugram, India</div>
+        <div class="tl-desc"><ul>
+          <li>Led end-to-end program governance for enterprise-scale initiatives across Full Stack, Cloud, Data, and AI domains</li>
+          <li>Designed outcome-driven learning journeys and assessment frameworks aligned with client business objectives</li>
+          <li>Drove AI productivity initiatives using GitHub Copilot and GenAI frameworks for developers and instructors</li>
+          <li>Partnered with enterprise stakeholders and SMEs to build future-ready digital capabilities</li>
+        </ul></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Feb 2020 – Mar 2023 · 3 yrs</div>
+        <div class="tl-role">Independent Skilling Consultant &amp; Training Lead</div>
+        <div class="tl-company">Self-Employed · India</div>
+        <div class="tl-desc"><ul>
+          <li>Provided strategic skilling consultancy to diverse organisations, developing customised Microsoft technology training solutions</li>
+          <li>Led technical bootcamps and workshops empowering professionals in cloud and emerging roles</li>
+          <li>Created learning content translating complex technical features into tangible business benefits</li>
+        </ul></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Jan 2019 – Feb 2023 · 4 yrs</div>
+        <div class="tl-role">Senior Subject Matter Expert</div>
+        <div class="tl-company">Microsoft IT Academy · Delhi, India</div>
+        <div class="tl-desc"><ul>
+          <li>Delivered corporate training, boot camps, and certification workshops on Microsoft technologies</li>
+          <li>Acted as technical authority for curriculum development and assessment design</li>
+        </ul></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Apr 2014 – Nov 2020 · 6.5 yrs</div>
+        <div class="tl-role">Senior Technical Manager &amp; SME</div>
+        <div class="tl-company">Microsoft Student Partner Network · India</div>
+        <div class="tl-desc"><ul>
+          <li>Spearheaded nationwide technical enablement programs, managing a network of student partners across India</li>
+          <li>Developed and delivered large-scale seminars, webinars, and boot camps on Microsoft technologies</li>
+          <li>Built a robust pipeline of future talent skilled in the Microsoft stack</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrapper">
+    <div class="section-tag">Expertise</div>
+    <h2 class="section-title">Technical <em>&amp; Strategic Skills</em></h2>
+    <p class="section-sub">A broad stack spanning modern cloud infrastructure, AI tooling, full stack development, and enterprise learning strategy.</p>
+    <div class="skills-layout">
+      <div>
+        <div class="skill-group-title">AI &amp; Emerging Tech</div>
+        <div class="skill-pills">
+          <span class="pill highlight">GenAI</span><span class="pill highlight">AI Agents</span><span class="pill highlight">GitHub Copilot</span><span class="pill highlight">Agentic AI</span><span class="pill">Databricks</span><span class="pill">Responsible AI</span><span class="pill">TDD Automation</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Cloud &amp; Infrastructure</div>
+        <div class="skill-pills">
+          <span class="pill highlight">Microsoft Azure</span><span class="pill">Azure App Service</span><span class="pill">Azure DevOps</span><span class="pill">Cloud Migration</span><span class="pill">ASP.NET Core</span><span class="pill">CI/CD Pipelines</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Data Engineering</div>
+        <div class="skill-pills">
+          <span class="pill">Data Pipelines</span><span class="pill">Databricks</span><span class="pill">Data Strategy</span><span class="pill">Analytics</span><span class="pill">Data Architecture</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Program &amp; Learning Strategy</div>
+        <div class="skill-pills">
+          <span class="pill highlight">Enterprise L&amp;D</span><span class="pill">Curriculum Design</span><span class="pill">Assessment Frameworks</span><span class="pill">Program Governance</span><span class="pill">Stakeholder Management</span><span class="pill">EdTech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrapper">
+    <div class="section-tag">Credentials</div>
+    <h2 class="section-title">Certifications &amp; <em>Learning</em></h2>
+    <p class="section-sub">Continuous development across technology, leadership, and design thinking.</p>
+    <div class="cert-grid">
+      <div class="cert-card"><div class="cert-issuer">Microsoft</div><div class="cert-name">MTA: HTML5 Application Development Fundamentals</div></div>
+      <div class="cert-card"><div class="cert-issuer">Microsoft</div><div class="cert-name">MTA: Web Development Fundamentals</div></div>
+      <div class="cert-card"><div class="cert-issuer">LinkedIn Learning</div><div class="cert-name">The Six Morning Habits of High Performers</div></div>
+      <div class="cert-card"><div class="cert-issuer">Professional Development</div><div class="cert-name">Design Thinking: Customer Experience</div></div>
+      <div class="cert-card"><div class="cert-issuer">Leadership</div><div class="cert-name">Building Self-Confidence</div></div>
+      <div class="cert-card" style="border-color:rgba(200,169,110,0.25);background:rgba(200,169,110,0.04)">
+        <div class="cert-issuer" style="color:var(--green)">In Progress</div>
+        <div class="cert-name">Executive MBA — Leadership, Strategy &amp; Business Decision-Making</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrapper">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Build <em>Something Together</em></h2>
+    <p class="section-sub">Whether you're looking for a consulting partner, an enterprise program SME, or exploring strategic collaboration — I'd love to hear from you.</p>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <a href="mailto:parth.shukla1989@gmail.com" class="contact-item">
+          <span class="contact-item-icon">✉️</span>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-val">parth.shukla1989@gmail.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="contact-item">
+          <span class="contact-item-icon">💼</span>
+          <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">linkedin.com/in/parth-shukla-09205239</div></div>
+        </a>
+        <a href="https://www.self.so/parth-Shukla-SME" target="_blank" class="contact-item">
+          <span class="contact-item-icon">🌐</span>
+          <div><div class="contact-item-label">Portfolio</div><div class="contact-item-val">self.so/parth-Shukla-SME</div></div>
+        </a>
+        <div class="contact-item" style="cursor:default">
+          <span class="contact-item-icon">📍</span>
+          <div><div class="contact-item-label">Location</div><div class="contact-item-val">Greater Delhi Area, India · Remote Available</div></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Priya Mehta" required /></div>
+        <div class="form-group"><label>Company / Organisation</label><input type="text" placeholder="e.g. TechSME Pvt. Ltd." /></div>
+        <div class="form-group">
+          <label>I'm interested in</label>
+          <select>
+            <option>Cloud &amp; Azure Consulting</option>
+            <option>GenAI &amp; AI Adoption</option>
+            <option>Enterprise Learning Design</option>
+            <option>Full Stack Advisory</option>
+            <option>Strategic Partnership</option>
+            <option>Investor Discussion</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project, challenge, or opportunity..."></textarea></div>
+        <button type="submit" class="btn-gold" style="border:none;cursor:pointer;justify-content:center;">Send Message →</button>
+        <p id="form-msg" style="font-size:0.82rem;color:var(--green);display:none;margin-top:4px;">✅ Thanks! I'll be in touch within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrapper">
+    <div class="footer-inner">
+      <div class="footer-name">Parth Shukla</div>
+      <div class="footer-copy">© 2025 · SME &amp; Technology Consultant · Greater Delhi, India</div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="social-btn" title="LinkedIn">in</a>
+        <a href="mailto:parth.shukla1989@gmail.com" class="social-btn" title="Email">@</a>
+        <a href="https://www.self.so/parth-Shukla-SME" target="_blank" class="social-btn" title="Portfolio">↗</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const msg = document.getElementById('form-msg');
+    msg.style.display = 'block';
+    e.target.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 5000);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .tl-item, .cert-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>
