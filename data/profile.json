@@ -1,0 +1,111 @@
+{
+  "name": "Parth Shukla",
+  "headline": "AI Transformation Lead",
+  "subhead": "Copilot & Agentic AI Adoption · Enterprise AI Skilling",
+  "intro": "Most organisations don't have an AI tools problem. They have an AI adoption problem. I help teams close that gap: the right use cases, the skills and guardrails, and Microsoft 365 Copilot, AI agents and Claude in everyday work.",
+  "badge": "Microsoft Certified: AI Transformation Leader",
+  "availability": "Open to AI Transformation roles, consulting and training engagements",
+  "location": "Delhi NCR, India · Remote and on-site",
+  "email": "parth.shukla1989@gmail.com",
+  "siteUrl": "https://parthshuklaa.github.io",
+  "bookingUrl": "mailto:parth.shukla1989@gmail.com?subject=Let%27s%20talk%20about%20AI%20adoption",
+  "readinessCheckUrl": "https://github.com/ParthShuklaa/ai-adoption-readiness-check",
+  "trainerProfileUrl": "",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/parth-shukla-09205239/",
+    "github": "https://github.com/ParthShuklaa",
+    "x": "",
+    "instagram": ""
+  },
+  "stats": [
+    { "value": "10,000+", "label": "Professionals trained" },
+    { "value": "100+", "label": "Enterprise cohorts in 3 years" },
+    { "value": "13+", "label": "Years in tech training & consulting" },
+    { "value": "4.5+/5", "label": "Learner feedback" }
+  ],
+  "services": [
+    {
+      "title": "AI Adoption Consulting",
+      "body": "Discovery, use-case prioritisation, business value and ROI, responsible AI guardrails and a 90-day rollout plan for Copilot, Claude or AI agents.",
+      "tags": ["AI strategy", "Change management", "Governance"]
+    },
+    {
+      "title": "Copilot & Claude Workshops",
+      "body": "Hands-on, role-based sessions for leaders, managers, admins and engineers: Microsoft 365 Copilot, Copilot Studio agents, GitHub Copilot, Claude and Claude Code.",
+      "tags": ["M365 Copilot", "Copilot Studio", "Claude"]
+    },
+    {
+      "title": "AI Skilling Programmes",
+      "body": "Multi-week enterprise programmes with learning journeys, labs, capstones and pre/mid/final assessments that prove progress. GenAI, RAG, agents, data engineering.",
+      "tags": ["Learning design", "GenAI & RAG", "Assessments"]
+    },
+    {
+      "title": "Certification Cohorts",
+      "body": "Exam-focused cohorts for Microsoft, AWS and Anthropic AI credentials, built around real business scenarios rather than memorisation.",
+      "tags": ["Microsoft", "AWS", "Anthropic"]
+    }
+  ],
+  "experience": [
+    {
+      "period": "Nov 2026 – Present",
+      "role": "Independent AI Transformation & Skilling Consultant",
+      "org": "Self-employed · India",
+      "points": [
+        "Advising enterprises and training partners on Microsoft 365 Copilot and agentic AI adoption",
+        "Delivering Copilot administration, Copilot Studio agent and GenAI development-readiness programmes",
+        "Building one open-source Claude project a week, in public"
+      ]
+    },
+    {
+      "period": "Feb 2023 – Nov 2026",
+      "role": "Technology Program Leader, Enterprise B2B (AI & Engineering)",
+      "org": "Great Learning · Gurugram",
+      "points": [
+        "Led 100+ enterprise cohorts in 3 years for global banks, Big 4 firms, product companies and top Indian IT services firms, supporting ~INR 50 Cr in annual B2B revenue",
+        "Ran discovery, AI upskilling roadmaps and Copilot / GenAI adoption plans with client L&D and delivery leaders",
+        "Built reusable AI labs and capstone kits (RAG, multimodal RAG, LLM-as-a-Judge, LangSmith) used across cohorts"
+      ]
+    },
+    {
+      "period": "Feb 2020 – Mar 2023",
+      "role": "Independent Skilling Consultant & Training Lead",
+      "org": "Self-employed · India",
+      "points": [
+        "Strategic skilling consultancy and customised Microsoft technology training for organisations",
+        "Technical bootcamps and workshops for professionals moving into cloud and emerging roles"
+      ]
+    },
+    {
+      "period": "Jan 2019 – Feb 2023",
+      "role": "Senior Subject Matter Expert",
+      "org": "Microsoft IT Academy · Delhi",
+      "points": [
+        "Corporate training, bootcamps and certification workshops on Microsoft technologies",
+        "Technical authority for curriculum development and assessment design"
+      ]
+    },
+    {
+      "period": "Apr 2014 – Nov 2020",
+      "role": "Senior Technical Manager & SME",
+      "org": "Microsoft Student Partner Network · India",
+      "points": [
+        "Led nationwide technical enablement programmes and a network of student partners",
+        "Delivered large-scale seminars, webinars and bootcamps on the Microsoft stack"
+      ]
+    }
+  ],
+  "certifications": [
+    { "name": "Microsoft Certified: AI Transformation Leader (AB-731)", "issuer": "Microsoft", "year": "2026", "note": "Score 887/1000", "verifyUrl": "https://learn.microsoft.com/en-in/users/parthshukla-6316/transcript/7oj6milwnn2jew8" },
+    { "name": "Microsoft Certified: Azure AI Apps and Agents Developer Associate", "issuer": "Microsoft", "year": "2026", "note": "", "verifyUrl": "https://learn.microsoft.com/en-in/users/parthshukla-6316/transcript/7oj6milwnn2jew8" },
+    { "name": "AWS Certified AI Practitioner", "issuer": "AWS", "year": "2026", "note": "Score 890/1000", "verifyUrl": "" },
+    { "name": "AI Fluency, Claude Code in Action, AI Fluency for Educators", "issuer": "Anthropic", "year": "2026", "note": "", "verifyUrl": "" },
+    { "name": "Azure AI Fundamentals, Azure Fundamentals, Office Specialist Associate", "issuer": "Microsoft", "year": "2021", "note": "16 Microsoft exams passed", "verifyUrl": "" },
+    { "name": "Executive MBA: Leadership, Strategy & Business Decision-Making", "issuer": "In progress", "year": "", "note": "", "verifyUrl": "" }
+  ],
+  "skills": {
+    "AI adoption": ["AI strategy", "Change management", "Responsible AI", "AI governance", "Business value & ROI"],
+    "AI tools": ["Microsoft 365 Copilot", "Copilot Studio", "GitHub Copilot", "Claude & Claude Code", "Azure OpenAI", "MCP"],
+    "Engineering": ["RAG & vector search", "AI agents", "LLM evaluation", ".NET full stack", "React / Angular"],
+    "Cloud & data": ["Microsoft Azure", "AWS", "Databricks", "Power BI", "Python"]
+  }
+}

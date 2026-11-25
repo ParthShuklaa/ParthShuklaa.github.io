@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Parth Shukla – updates</title>
+  <link>https://parthshuklaa.github.io/</link>
+  <atom:link href="https://parthshuklaa.github.io/feed.xml" rel="self" type="application/rss+xml" />
+  <description>AI Transformation Lead: projects, posts, certifications and sessions.</description>
+  <language>en</language>
+  <item>
+    <title>Shipped: AI Adoption Readiness Check</title>
+    <link>https://github.com/ParthShuklaa/ai-adoption-readiness-check</link>
+    <guid isPermaLink="false">2026-11-25-https://github.com/ParthShuklaa/ai-adoption-readiness-check</guid>
+    <pubDate>Wed, 25 Nov 2026 03:30:00 GMT</pubDate>
+    <category>GitHub</category>
+    <description>Project 1 of my weekly Claude build series: a 15-question assessment that writes a 90-day AI rollout roadmap.</description>
+  </item>
+  <item>
+    <title>Microsoft Certified: AI Transformation Leader (AB-731)</title>
+    <link>https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/</link>
+    <guid isPermaLink="false">2026-11-24-https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/</guid>
+    <pubDate>Tue, 24 Nov 2026 03:30:00 GMT</pubDate>
+    <category>Certification</category>
+    <description>Passed with 887/1000. The lesson: AI adoption is a people project with a technology component.</description>
+  </item>
+</channel>
+</rss>

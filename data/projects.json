@@ -1,0 +1,13 @@
+[
+  {
+    "id": "p01",
+    "title": "AI Adoption Readiness Check",
+    "shipped": "2026-11-25",
+    "problem": "Teams buy AI licences, but adoption stalls without a plan.",
+    "summary": "Answer 15 questions across strategy, data, governance, skills and change. Get a readiness score and a 90-day Copilot / Claude rollout roadmap written by Claude.",
+    "stack": ["Claude API", "Next.js", "TypeScript"],
+    "repo": "https://github.com/ParthShuklaa/ai-adoption-readiness-check",
+    "demo": "",
+    "resumeLine": "AI Adoption Readiness Check | Claude API, Next.js, TypeScript | Nov 2026 | github.com/ParthShuklaa/ai-adoption-readiness-check – Built and open-sourced an assessment that scores organisations across 5 AI-readiness dimensions and uses Claude structured outputs to generate a 90-day Microsoft 365 Copilot / Claude rollout roadmap; includes rule-based fallback and unit tests"
+  }
+]

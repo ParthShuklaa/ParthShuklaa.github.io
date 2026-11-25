@@ -1,0 +1,6 @@
+{
+  "user": "ParthShuklaa",
+  "include": ["ai-adoption-readiness-check"],
+  "includeTopics": ["claude", "portfolio"],
+  "max": 6
+}

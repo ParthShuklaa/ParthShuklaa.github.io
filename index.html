@@ -3,559 +3,206 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Parth Shukla — Technology Consultant & SME</title>
-<meta name="description" content="Parth Shukla — Subject Matter Expert & Technology Program Leader in Full Stack, Cloud, Data Engineering, and AI. Available for B2B consulting, enterprise learning design, and strategic partnerships." />
+<title>Parth Shukla | AI Transformation Lead</title>
+<meta name="description" content="Parth Shukla: AI Transformation Lead. Copilot &amp; Agentic AI Adoption · Enterprise AI Skilling. 10,000+ professionals trained." />
+<link rel="canonical" href="https://parthshuklaa.github.io/" />
+<link rel="alternate" type="application/rss+xml" title="Parth Shukla – updates" href="https://parthshuklaa.github.io/feed.xml" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Parth Shukla | AI Transformation Lead" />
+<meta property="og:description" content="Parth Shukla: AI Transformation Lead. Copilot &amp; Agentic AI Adoption · Enterprise AI Skilling. 10,000+ professionals trained." />
+<meta property="og:url" content="https://parthshuklaa.github.io/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Parth Shukla | AI Transformation Lead" />
+<meta name="twitter:description" content="Parth Shukla: AI Transformation Lead. Copilot &amp; Agentic AI Adoption · Enterprise AI Skilling. 10,000+ professionals trained." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --ink: #0D1117;
-    --ink-2: #1C2333;
-    --ink-3: #2A3548;
-    --gold: #C8A96E;
-    --gold-light: #E8CFA0;
-    --gold-pale: rgba(200,169,110,0.12);
-    --cream: #F5F0E8;
-    --muted: #6B7A99;
-    --border: rgba(255,255,255,0.06);
-    --text: #E8EDF5;
-    --text-dim: #8A97B0;
-    --azure: #3D9BE9;
-    --green: #3ECFA8;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--ink);
-    color: var(--text);
-    font-family: 'Cabinet Grotesk', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.4;
-  }
-
-  .grid-overlay {
-    position: fixed; inset: 0;
-    background-image:
-      linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
-    background-size: 64px 64px;
-    pointer-events: none; z-index: 0;
-  }
-
-  .orb { position: fixed; border-radius: 50%; filter: blur(130px); pointer-events: none; z-index: 0; }
-  .orb-1 { width: 700px; height: 700px; background: rgba(200,169,110,0.08); top: -300px; right: -200px; }
-  .orb-2 { width: 500px; height: 500px; background: rgba(61,155,233,0.07); bottom: 10%; left: -150px; }
-  .orb-3 { width: 400px; height: 400px; background: rgba(62,207,168,0.05); top: 50%; right: 10%; }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 20px 48px;
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(13,17,23,0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-family: 'Instrument Serif', serif; font-size: 1.2rem; color: var(--gold-light); text-decoration: none; }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-dim); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold-light); }
-  .nav-cta { background: var(--gold); color: var(--ink); padding: 9px 20px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: background 0.2s, transform 0.15s; }
-  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-  .wrapper { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 0 32px; }
-
-  /* HERO */
-  #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
-
-  .hero-inner {
-    display: grid; grid-template-columns: 1fr 340px; gap: 64px;
-    align-items: center; width: 100%;
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
-  }
-  .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
-
-  .hero-name {
-    font-family: 'Instrument Serif', serif;
-    font-size: clamp(3rem, 6vw, 5.2rem);
-    font-weight: 400; line-height: 1.05; letter-spacing: -0.01em;
-    color: var(--text); margin-bottom: 12px;
-  }
-  .hero-name em { font-style: italic; color: var(--gold-light); }
-
-  .hero-title { font-size: 1rem; font-weight: 500; color: var(--text-dim); margin-bottom: 28px; line-height: 1.5; }
-
-  .hero-desc { font-size: 1.05rem; color: var(--text-dim); font-weight: 300; line-height: 1.8; max-width: 520px; margin-bottom: 40px; }
-
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-  .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--ink); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.2s, transform 0.15s; }
-  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-  .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(200,169,110,0.3); color: var(--gold-light); padding: 13px 28px; border-radius: 7px; font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.15s; }
-  .btn-outline:hover { border-color: var(--gold); background: var(--gold-pale); transform: translateY(-2px); }
-
-  /* AVATAR CARD */
-  .avatar-card {
-    background: var(--ink-2); border: 1px solid rgba(200,169,110,0.15);
-    border-radius: 20px; padding: 36px 28px; text-align: center;
-    position: relative; overflow: hidden;
-    animation: fadeUp 0.9s ease 0.15s both;
-  }
-  .avatar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-
-  .avatar-initials {
-    width: 88px; height: 88px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Instrument Serif', serif; font-size: 2rem; color: var(--ink);
-    margin: 0 auto 16px;
-  }
-  .avatar-name { font-family: 'Instrument Serif', serif; font-size: 1.25rem; color: var(--text); margin-bottom: 4px; }
-  .avatar-role { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 20px; }
-
-  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-  .stat { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 14px 10px; }
-  .stat-val { font-family: 'Instrument Serif', serif; font-size: 1.6rem; color: var(--gold-light); line-height: 1; margin-bottom: 3px; }
-  .stat-label { font-size: 0.72rem; color: var(--text-dim); font-weight: 500; letter-spacing: 0.04em; }
-
-  .avail-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(62,207,168,0.1); border: 1px solid rgba(62,207,168,0.25); border-radius: 100px; padding: 7px 14px; font-size: 0.78rem; color: var(--green); font-weight: 500; }
-  .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-
-  /* SECTIONS */
-  section { padding: 96px 0; }
-
-  .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .section-tag::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
-
-  .section-title { font-family: 'Instrument Serif', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
-  .section-title em { font-style: italic; color: var(--gold-light); }
-
-  .section-sub { font-size: 1rem; color: var(--text-dim); font-weight: 300; max-width: 540px; line-height: 1.7; margin-bottom: 56px; }
-
-  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,169,110,0.2), transparent); margin: 0; }
-
-  /* SERVICES */
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
-  .service-card {
-    background: var(--ink-2); border: 1px solid var(--border);
-    border-radius: 16px; padding: 30px 26px;
-    position: relative; overflow: hidden;
-    transition: border-color 0.25s, transform 0.2s;
-    animation: fadeUp 0.6s ease both;
-  }
-  .service-card:hover { border-color: rgba(200,169,110,0.3); transform: translateY(-4px); }
-  .service-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(200,169,110,0.04) 0%, transparent 60%); pointer-events: none; }
-
-  .service-icon { font-size: 26px; margin-bottom: 16px; display: block; }
-  .service-name { font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--text); margin-bottom: 10px; }
-  .service-desc { font-size: 0.85rem; color: var(--text-dim); line-height: 1.7; font-weight: 300; }
-
-  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-  .tag { font-size: 0.72rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 100px; padding: 3px 10px; color: var(--text-dim); font-weight: 500; }
-
-  /* TIMELINE */
-  .timeline { position: relative; padding-left: 32px; }
-  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), transparent); }
-
-  .tl-item { position: relative; padding-bottom: 44px; animation: fadeUp 0.6s ease both; }
-  .tl-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); border: 2px solid var(--ink); box-shadow: 0 0 0 3px rgba(200,169,110,0.2); }
-
-  .tl-period { font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-  .tl-role { font-family: 'Instrument Serif', serif; font-size: 1.15rem; color: var(--text); margin-bottom: 2px; }
-  .tl-company { font-size: 0.85rem; color: var(--azure); font-weight: 500; margin-bottom: 12px; }
-  .tl-desc { font-size: 0.88rem; color: var(--text-dim); font-weight: 300; line-height: 1.75; }
-  .tl-desc ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
-  .tl-desc li { display: flex; gap: 10px; align-items: flex-start; }
-  .tl-desc li::before { content: '→'; color: var(--gold); flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
-
-  /* SKILLS */
-  .skills-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  .skill-group-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { background: var(--ink-2); border: 1px solid rgba(200,169,110,0.15); border-radius: 100px; padding: 7px 16px; font-size: 0.82rem; color: var(--text-dim); transition: border-color 0.2s, color 0.2s; }
-  .pill:hover { border-color: var(--gold); color: var(--gold-light); }
-  .pill.highlight { border-color: rgba(200,169,110,0.4); color: var(--gold-light); background: var(--gold-pale); }
-
-  /* CERTIFICATIONS */
-  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .cert-card { background: var(--ink-2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s, transform 0.2s; }
-  .cert-card:hover { border-color: rgba(200,169,110,0.25); transform: translateY(-2px); }
-  .cert-issuer { font-size: 0.72rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-  .cert-name { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.4; }
-
-  /* CONTACT */
-  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; }
-  .form-group input, .form-group textarea, .form-group select { background: var(--ink-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; color: var(--text); font-family: 'Cabinet Grotesk', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: rgba(200,169,110,0.4); }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  .form-group select option { background: var(--ink-2); }
-
-  .contact-info { display: flex; flex-direction: column; gap: 20px; }
-  .contact-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px; background: var(--ink-2); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
-  .contact-item:hover { border-color: rgba(200,169,110,0.3); transform: translateX(4px); }
-  .contact-item-icon { font-size: 20px; flex-shrink: 0; }
-  .contact-item-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 2px; }
-  .contact-item-val { font-size: 0.9rem; color: var(--text); }
-
-  /* FOOTER */
-  footer { border-top: 1px solid var(--border); padding: 40px 0; }
-  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-  .footer-name { font-family: 'Instrument Serif', serif; font-size: 1.1rem; color: var(--gold-light); }
-  .footer-copy { font-size: 0.8rem; color: var(--text-dim); }
-  .footer-socials { display: flex; gap: 12px; }
-  .social-btn { width: 36px; height: 36px; border-radius: 8px; background: var(--ink-2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-dim); text-decoration: none; font-size: 14px; transition: border-color 0.2s, color 0.2s; }
-  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-  .service-card:nth-child(1) { animation-delay: 0.05s; }
-  .service-card:nth-child(2) { animation-delay: 0.12s; }
-  .service-card:nth-child(3) { animation-delay: 0.19s; }
-  .service-card:nth-child(4) { animation-delay: 0.26s; }
-  .service-card:nth-child(5) { animation-delay: 0.33s; }
-  .service-card:nth-child(6) { animation-delay: 0.40s; }
-  .tl-item:nth-child(1) { animation-delay: 0.1s; }
-  .tl-item:nth-child(2) { animation-delay: 0.2s; }
-  .tl-item:nth-child(3) { animation-delay: 0.3s; }
-  .tl-item:nth-child(4) { animation-delay: 0.4s; }
-
-  @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .wrapper { padding: 0 20px; }
-    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-    .avatar-card { max-width: 340px; margin: 0 auto; }
-    .services-grid { grid-template-columns: 1fr; }
-    .cert-grid { grid-template-columns: 1fr 1fr; }
-    .skills-layout { grid-template-columns: 1fr; }
-    .contact-inner { grid-template-columns: 1fr; }
-    .footer-inner { flex-direction: column; text-align: center; }
-  }
+  :root { --ink:#0D1117; --ink-2:#161D2B; --ink-3:#222C3F; --gold:#C8A96E; --gold-light:#E8CFA0; --gold-pale:rgba(200,169,110,.12); --text:#E8EDF5; --dim:#97A3BA; --border:rgba(255,255,255,.08); --azure:#3D9BE9; --green:#3ECFA8; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--text);font:16px/1.6 'DM Sans',system-ui,sans-serif}
+  a{color:var(--gold-light)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+  .logo{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--gold-light);text-decoration:none}
+  .nav-links{display:flex;gap:22px;list-style:none}
+  .nav-links a{color:var(--dim);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+  .nav-links a:hover{color:var(--gold-light)}
+  .btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:700;font-size:.92rem;text-decoration:none;border:1px solid var(--gold)}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-ghost{color:var(--gold-light)}
+  .btn:hover{transform:translateY(-1px)}
+  header.hero{padding:72px 0 40px}
+  .badge{display:inline-flex;gap:8px;align-items:center;background:var(--gold-pale);border:1px solid rgba(200,169,110,.35);color:var(--gold-light);padding:6px 14px;border-radius:999px;font-size:.82rem;font-weight:500}
+  h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.05;margin:20px 0 10px}
+  h1 em{color:var(--gold-light)}
+  .subhead{color:var(--gold-light);font-weight:500;margin-bottom:18px}
+  .intro{color:var(--dim);font-size:1.1rem;max-width:720px;margin-bottom:28px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .stat{background:var(--ink-2);border:1px solid var(--border);border-radius:12px;padding:16px}
+  .stat b{display:block;font-family:'Instrument Serif',serif;font-size:2rem;font-weight:400;color:var(--gold-light)}
+  .stat span{color:var(--dim);font-size:.85rem}
+  section{padding:56px 0;border-top:1px solid var(--border);scroll-margin-top:64px}
+  .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:700}
+  h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:2.2rem;margin:6px 0 8px}
+  .lead{color:var(--dim);max-width:680px;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .update,.project,.service,.cert{background:var(--ink-2);border:1px solid var(--border);border-radius:12px;padding:20px}
+  .update h3,.project h3,.service h3{font-size:1.08rem;margin:8px 0 6px}
+  .update h3 a{color:var(--text);text-decoration:none}
+  .update h3 a:hover{color:var(--gold-light)}
+  .update p,.project p,.service p{color:var(--dim);font-size:.95rem}
+  .update-meta,.project-top{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--dim)}
+  .pill{padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+  .p-linkedin{background:#0A66C2;color:#fff}.p-github{background:#2b3137;color:#fff;border:1px solid #444}.p-x{background:#000;color:#fff;border:1px solid #444}
+  .p-instagram{background:#C13584;color:#fff}.p-cert{background:var(--gold);color:var(--ink)}.p-blog,.p-talk{background:var(--ink-3);color:var(--text)}
+  details{margin-top:16px}summary{cursor:pointer;color:var(--gold-light);font-weight:500}
+  details .grid{margin-top:16px}
+  .project-no{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--gold)}
+  .problem{color:var(--text)!important;font-style:italic;margin-bottom:6px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+  .tags span{background:var(--ink-3);color:var(--text);font-size:.75rem;padding:3px 10px;border-radius:6px}
+  .project-links{display:flex;gap:16px;font-weight:500;font-size:.92rem}
+  .gh-list{list-style:none;margin-top:24px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .gh-list li{display:grid;grid-template-columns:240px 1fr auto;gap:12px;padding:12px 16px;border-top:1px solid var(--border);font-size:.9rem}
+  .gh-list li:first-child{border-top:none}.gh-list span,.gh-list time{color:var(--dim)}
+  .timeline{display:grid;gap:14px}
+  .tl{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--border)}
+  .tl:first-child{border-top:none}
+  .tl .period{color:var(--gold);font-size:.88rem;font-weight:500}
+  .tl h3{font-size:1.05rem}.tl .org{color:var(--dim);font-size:.9rem;margin-bottom:6px}
+  .tl ul{padding-left:18px;color:var(--dim);font-size:.94rem}
+  .cert{display:flex;flex-direction:column;gap:4px}
+  .cert .issuer{color:var(--gold);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .cert b{font-weight:500}.cert small{color:var(--dim)}
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .skills h3{font-size:.95rem;color:var(--gold-light);margin-bottom:8px}
+  form{display:grid;gap:12px;max-width:620px}
+  label{display:grid;gap:6px;font-size:.88rem;color:var(--dim)}
+  input,select,textarea{font:inherit;color:var(--text);background:var(--ink-2);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+  textarea{min-height:120px}
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .contact-list{display:grid;gap:10px;align-content:start}
+  .contact-list a{color:var(--text);text-decoration:none;background:var(--ink-2);border:1px solid var(--border);border-radius:10px;padding:12px 16px}
+  footer{border-top:1px solid var(--border);padding:28px 0;color:var(--dim);font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  @media (max-width:760px){.grid-2{grid-template-columns:1fr}nav .btn{display:none}.logo{display:none}nav .wrap{justify-content:flex-start}.nav-links{gap:14px;overflow-x:auto;white-space:nowrap}.nav-links a{font-size:.72rem;letter-spacing:.03em}.stats{grid-template-columns:repeat(2,1fr)}.tl,.contact{grid-template-columns:1fr}.gh-list li{grid-template-columns:1fr}header.hero{padding-top:40px}}
 </style>
 </head>
 <body>
-
-<div class="grid-overlay"></div>
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Parth Shukla</a>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Parth Shukla</a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#updates">Updates</a></li><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Book a Call →</a>
-</nav>
+  <a class="btn btn-gold" href="mailto:parth.shukla1989@gmail.com?subject=Let%27s%20talk%20about%20AI%20adoption">Book a call</a>
+</div></nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="wrapper">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-eyebrow">Available for Consulting &amp; Partnerships</div>
-        <h1 class="hero-name">Parth<br /><em>Shukla</em></h1>
-        <p class="hero-title">Subject Matter Expert &amp; Technology Program Leader<br />Full Stack · Cloud · Data Engineering · GenAI</p>
-        <p class="hero-desc">10+ years helping enterprises and SMEs build scalable technology capabilities — from cloud-first architecture and AI adoption to outcome-driven learning programs. Based in Greater Delhi, serving clients globally.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-gold">Start a Conversation →</a>
-          <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="btn-outline">View LinkedIn ↗</a>
-        </div>
+<header class="hero" id="top"><div class="wrap">
+  <span class="badge">✦ Microsoft Certified: AI Transformation Leader</span>
+  <h1>Parth Shukla<br /><em>AI Transformation Lead</em></h1>
+  <p class="subhead">Copilot &amp; Agentic AI Adoption · Enterprise AI Skilling</p>
+  <p class="intro">Most organisations don't have an AI tools problem. They have an AI adoption problem. I help teams close that gap: the right use cases, the skills and guardrails, and Microsoft 365 Copilot, AI agents and Claude in everyday work.</p>
+  <div class="cta">
+    <a class="btn btn-gold" href="mailto:parth.shukla1989@gmail.com?subject=Let%27s%20talk%20about%20AI%20adoption">Book a call</a>
+    <a class="btn btn-ghost" href="#projects">View projects</a>
+    <a class="btn btn-ghost" href="https://github.com/ParthShuklaa/ai-adoption-readiness-check" target="_blank" rel="noopener">AI readiness check ↗</a>
+  </div>
+  <div class="stats"><div class="stat"><b>10,000+</b><span>Professionals trained</span></div><div class="stat"><b>100+</b><span>Enterprise cohorts in 3 years</span></div><div class="stat"><b>13+</b><span>Years in tech training &amp; consulting</span></div><div class="stat"><b>4.5+/5</b><span>Learner feedback</span></div></div>
+</div></header>
+
+<section id="updates"><div class="wrap">
+  <p class="eyebrow">Latest</p>
+  <h2>Updates from everywhere</h2>
+  <p class="lead">Posts, projects, certifications and sessions from LinkedIn, GitHub and beyond, in one place. <a href="feed.xml">Subscribe via RSS</a>.</p>
+  <div class="grid"><article class="update">
+      <div class="update-meta"><span class="pill p-github">GitHub</span><time datetime="2026-11-25">25 Nov 2026</time></div>
+      <h3><a href="https://github.com/ParthShuklaa/ai-adoption-readiness-check" target="_blank" rel="noopener">Shipped: AI Adoption Readiness Check</a></h3>
+      <p>Project 1 of my weekly Claude build series: a 15-question assessment that writes a 90-day AI rollout roadmap.</p>
+    </article><article class="update">
+      <div class="update-meta"><span class="pill p-cert">Certification</span><time datetime="2026-11-24">24 Nov 2026</time></div>
+      <h3><a href="https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/" target="_blank" rel="noopener">Microsoft Certified: AI Transformation Leader (AB-731)</a></h3>
+      <p>Passed with 887/1000. The lesson: AI adoption is a people project with a technology component.</p>
+    </article></div>
+  
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <p class="eyebrow">Built in public</p>
+  <h2>One AI project a week</h2>
+  <p class="lead">Each project is a real business use case built with Claude, Copilot or Azure AI, open source on GitHub.</p>
+  <div class="grid"><article class="project">
+      <div class="project-top"><span class="project-no">P01</span><time datetime="2026-11-25">Shipped 25 Nov 2026</time></div>
+      <h3>AI Adoption Readiness Check</h3>
+      <p class="problem">Teams buy AI licences, but adoption stalls without a plan.</p>
+      <p>Answer 15 questions across strategy, data, governance, skills and change. Get a readiness score and a 90-day Copilot / Claude rollout roadmap written by Claude.</p>
+      <div class="tags"><span>Claude API</span><span>Next.js</span><span>TypeScript</span></div>
+      <div class="project-links">
+        <a href="https://github.com/ParthShuklaa/ai-adoption-readiness-check" target="_blank" rel="noopener">Code on GitHub ↗</a>
+        
       </div>
-      <div class="avatar-card">
-        <div class="avatar-initials">PS</div>
-        <div class="avatar-name">Parth Shukla</div>
-        <div class="avatar-role">SME &amp; Program Leader · Great Learning</div>
-        <div class="stat-row">
-          <div class="stat"><div class="stat-val">10+</div><div class="stat-label">Years Experience</div></div>
-          <div class="stat"><div class="stat-val">3</div><div class="stat-label">Core Domains</div></div>
-          <div class="stat"><div class="stat-val">B2B</div><div class="stat-label">Enterprise Focus</div></div>
-          <div class="stat"><div class="stat-val">AI</div><div class="stat-label">Specialisation</div></div>
-        </div>
-        <div class="avail-badge"><span class="avail-dot"></span>Open to new engagements</div>
-      </div>
+    </article></div>
+  
+</div></section>
+
+<section id="services"><div class="wrap">
+  <p class="eyebrow">Work with me</p>
+  <h2>How I help teams adopt AI</h2>
+  <p class="lead">Open to AI Transformation roles, consulting and training engagements.</p>
+  <div class="grid grid-2"><article class="service"><h3>AI Adoption Consulting</h3><p>Discovery, use-case prioritisation, business value and ROI, responsible AI guardrails and a 90-day rollout plan for Copilot, Claude or AI agents.</p><div class="tags"><span>AI strategy</span><span>Change management</span><span>Governance</span></div></article><article class="service"><h3>Copilot &amp; Claude Workshops</h3><p>Hands-on, role-based sessions for leaders, managers, admins and engineers: Microsoft 365 Copilot, Copilot Studio agents, GitHub Copilot, Claude and Claude Code.</p><div class="tags"><span>M365 Copilot</span><span>Copilot Studio</span><span>Claude</span></div></article><article class="service"><h3>AI Skilling Programmes</h3><p>Multi-week enterprise programmes with learning journeys, labs, capstones and pre/mid/final assessments that prove progress. GenAI, RAG, agents, data engineering.</p><div class="tags"><span>Learning design</span><span>GenAI &amp; RAG</span><span>Assessments</span></div></article><article class="service"><h3>Certification Cohorts</h3><p>Exam-focused cohorts for Microsoft, AWS and Anthropic AI credentials, built around real business scenarios rather than memorisation.</p><div class="tags"><span>Microsoft</span><span>AWS</span><span>Anthropic</span></div></article></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <p class="eyebrow">Experience</p>
+  <h2>13+ years where technology meets people</h2>
+  <div class="timeline"><div class="tl"><div class="period">Nov 2026 – Present</div><div><h3>Independent AI Transformation &amp; Skilling Consultant</h3><p class="org">Self-employed · India</p><ul><li>Advising enterprises and training partners on Microsoft 365 Copilot and agentic AI adoption</li><li>Delivering Copilot administration, Copilot Studio agent and GenAI development-readiness programmes</li><li>Building one open-source Claude project a week, in public</li></ul></div></div><div class="tl"><div class="period">Feb 2023 – Nov 2026</div><div><h3>Technology Program Leader, Enterprise B2B (AI &amp; Engineering)</h3><p class="org">Great Learning · Gurugram</p><ul><li>Led 100+ enterprise cohorts in 3 years for global banks, Big 4 firms, product companies and top Indian IT services firms, supporting ~INR 50 Cr in annual B2B revenue</li><li>Ran discovery, AI upskilling roadmaps and Copilot / GenAI adoption plans with client L&amp;D and delivery leaders</li><li>Built reusable AI labs and capstone kits (RAG, multimodal RAG, LLM-as-a-Judge, LangSmith) used across cohorts</li></ul></div></div><div class="tl"><div class="period">Feb 2020 – Mar 2023</div><div><h3>Independent Skilling Consultant &amp; Training Lead</h3><p class="org">Self-employed · India</p><ul><li>Strategic skilling consultancy and customised Microsoft technology training for organisations</li><li>Technical bootcamps and workshops for professionals moving into cloud and emerging roles</li></ul></div></div><div class="tl"><div class="period">Jan 2019 – Feb 2023</div><div><h3>Senior Subject Matter Expert</h3><p class="org">Microsoft IT Academy · Delhi</p><ul><li>Corporate training, bootcamps and certification workshops on Microsoft technologies</li><li>Technical authority for curriculum development and assessment design</li></ul></div></div><div class="tl"><div class="period">Apr 2014 – Nov 2020</div><div><h3>Senior Technical Manager &amp; SME</h3><p class="org">Microsoft Student Partner Network · India</p><ul><li>Led nationwide technical enablement programmes and a network of student partners</li><li>Delivered large-scale seminars, webinars and bootcamps on the Microsoft stack</li></ul></div></div></div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <p class="eyebrow">Credentials</p>
+  <h2>Certifications</h2>
+  <div class="grid"><div class="cert"><span class="issuer">Microsoft · 2026</span><b>Microsoft Certified: AI Transformation Leader (AB-731)</b><small>Score 887/1000</small><a href="https://learn.microsoft.com/en-in/users/parthshukla-6316/transcript/7oj6milwnn2jew8" target="_blank" rel="noopener">Verify ↗</a></div><div class="cert"><span class="issuer">Microsoft · 2026</span><b>Microsoft Certified: Azure AI Apps and Agents Developer Associate</b><a href="https://learn.microsoft.com/en-in/users/parthshukla-6316/transcript/7oj6milwnn2jew8" target="_blank" rel="noopener">Verify ↗</a></div><div class="cert"><span class="issuer">AWS · 2026</span><b>AWS Certified AI Practitioner</b><small>Score 890/1000</small></div><div class="cert"><span class="issuer">Anthropic · 2026</span><b>AI Fluency, Claude Code in Action, AI Fluency for Educators</b></div><div class="cert"><span class="issuer">Microsoft · 2021</span><b>Azure AI Fundamentals, Azure Fundamentals, Office Specialist Associate</b><small>16 Microsoft exams passed</small></div><div class="cert"><span class="issuer">In progress</span><b>Executive MBA: Leadership, Strategy &amp; Business Decision-Making</b></div></div>
+  <div class="skills" style="margin-top:32px"><div><h3>AI adoption</h3><div class="tags"><span>AI strategy</span><span>Change management</span><span>Responsible AI</span><span>AI governance</span><span>Business value &amp; ROI</span></div></div><div><h3>AI tools</h3><div class="tags"><span>Microsoft 365 Copilot</span><span>Copilot Studio</span><span>GitHub Copilot</span><span>Claude &amp; Claude Code</span><span>Azure OpenAI</span><span>MCP</span></div></div><div><h3>Engineering</h3><div class="tags"><span>RAG &amp; vector search</span><span>AI agents</span><span>LLM evaluation</span><span>.NET full stack</span><span>React / Angular</span></div></div><div><h3>Cloud &amp; data</h3><div class="tags"><span>Microsoft Azure</span><span>AWS</span><span>Databricks</span><span>Power BI</span><span>Python</span></div></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <p class="eyebrow">Contact</p>
+  <h2>Let's talk about your AI rollout</h2>
+  <div class="contact">
+    <form id="contact-form">
+      <label>Your name<input name="name" required /></label>
+      <label>Company / organisation<input name="company" /></label>
+      <label>I'm interested in<select name="topic">
+        <option>AI adoption consulting</option><option>Copilot / Claude workshop</option><option>AI skilling programme</option>
+        <option>Certification cohort</option><option>Full-time role</option><option>Something else</option></select></label>
+      <label>Message<textarea name="message" required></textarea></label>
+      <button class="btn btn-gold" type="submit">Send via email</button>
+      <small style="color:var(--dim)">Opens your email app with the message ready to send.</small>
+    </form>
+    <div class="contact-list">
+      <a href="mailto:parth.shukla1989@gmail.com">✉️ parth.shukla1989@gmail.com</a>
+      <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/ParthShuklaa" target="_blank" rel="noopener">GitHub ↗</a>
+      <span style="color:var(--dim)">📍 Delhi NCR, India · Remote and on-site</span>
     </div>
   </div>
-</section>
+</div></section>
 
-<div class="divider"></div>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrapper">
-    <div class="section-tag">What I Do</div>
-    <h2 class="section-title">Services for <em>B2B SMEs</em></h2>
-    <p class="section-sub">Strategic technology consulting, AI-enabled capability building, and enterprise learning programs that translate into measurable business outcomes.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">☁️</span>
-        <div class="service-name">Cloud Architecture &amp; Azure</div>
-        <p class="service-desc">Design and implement scalable Azure-based solutions — App Service, DevOps pipelines, migrations, and cloud-native modernisation for SMEs.</p>
-        <div class="service-tags"><span class="tag">Azure</span><span class="tag">Cloud Migration</span><span class="tag">DevOps</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🤖</span>
-        <div class="service-name">GenAI &amp; AI Adoption</div>
-        <p class="service-desc">Hands-on AI adoption strategies — GitHub Copilot integration, GenAI for developers, TDD automation, and responsible AI frameworks for your teams.</p>
-        <div class="service-tags"><span class="tag">GenAI</span><span class="tag">AI Agents</span><span class="tag">Copilot</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🎓</span>
-        <div class="service-name">Enterprise Learning Design</div>
-        <p class="service-desc">End-to-end learning journey design — curriculum strategy, SME alignment, assessments, and outcome frameworks that tie training to business KPIs.</p>
-        <div class="service-tags"><span class="tag">L&amp;D Strategy</span><span class="tag">Upskilling</span><span class="tag">EdTech</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🏗️</span>
-        <div class="service-name">Full Stack Consulting</div>
-        <p class="service-desc">Technical advisory for Full Stack projects — ASP.NET Core, web app architecture, code reviews, and developer productivity improvement programs.</p>
-        <div class="service-tags"><span class="tag">ASP.NET Core</span><span class="tag">Web Apps</span><span class="tag">Architecture</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">📊</span>
-        <div class="service-name">Data Engineering Advisory</div>
-        <p class="service-desc">Data strategy and engineering support — pipelines, Databricks, and building data-ready organisations for SMEs entering AI-led transformation.</p>
-        <div class="service-tags"><span class="tag">Databricks</span><span class="tag">Data Pipelines</span><span class="tag">Analytics</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🤝</span>
-        <div class="service-name">Strategic Partnerships</div>
-        <p class="service-desc">Open to co-delivery partnerships with EdTech platforms, training firms, and technology companies looking for an experienced SME and program lead.</p>
-        <div class="service-tags"><span class="tag">B2B Partnerships</span><span class="tag">Co-Delivery</span><span class="tag">SME</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="wrapper">
-    <div class="section-tag">Career</div>
-    <h2 class="section-title">A Decade of <em>Enterprise Impact</em></h2>
-    <p class="section-sub">From Microsoft's student partner network to leading enterprise-scale programs at Great Learning — a consistent track record of technology and talent transformation.</p>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-period">Feb 2023 – Present · 3 yrs</div>
-        <div class="tl-role">SME &amp; Program Leader — Full Stack, Data Engineering &amp; AI</div>
-        <div class="tl-company">Great Learning · Gurugram, India</div>
-        <div class="tl-desc"><ul>
-          <li>Led end-to-end program governance for enterprise-scale initiatives across Full Stack, Cloud, Data, and AI domains</li>
-          <li>Designed outcome-driven learning journeys and assessment frameworks aligned with client business objectives</li>
-          <li>Drove AI productivity initiatives using GitHub Copilot and GenAI frameworks for developers and instructors</li>
-          <li>Partnered with enterprise stakeholders and SMEs to build future-ready digital capabilities</li>
-        </ul></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">Feb 2020 – Mar 2023 · 3 yrs</div>
-        <div class="tl-role">Independent Skilling Consultant &amp; Training Lead</div>
-        <div class="tl-company">Self-Employed · India</div>
-        <div class="tl-desc"><ul>
-          <li>Provided strategic skilling consultancy to diverse organisations, developing customised Microsoft technology training solutions</li>
-          <li>Led technical bootcamps and workshops empowering professionals in cloud and emerging roles</li>
-          <li>Created learning content translating complex technical features into tangible business benefits</li>
-        </ul></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">Jan 2019 – Feb 2023 · 4 yrs</div>
-        <div class="tl-role">Senior Subject Matter Expert</div>
-        <div class="tl-company">Microsoft IT Academy · Delhi, India</div>
-        <div class="tl-desc"><ul>
-          <li>Delivered corporate training, boot camps, and certification workshops on Microsoft technologies</li>
-          <li>Acted as technical authority for curriculum development and assessment design</li>
-        </ul></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">Apr 2014 – Nov 2020 · 6.5 yrs</div>
-        <div class="tl-role">Senior Technical Manager &amp; SME</div>
-        <div class="tl-company">Microsoft Student Partner Network · India</div>
-        <div class="tl-desc"><ul>
-          <li>Spearheaded nationwide technical enablement programs, managing a network of student partners across India</li>
-          <li>Developed and delivered large-scale seminars, webinars, and boot camps on Microsoft technologies</li>
-          <li>Built a robust pipeline of future talent skilled in the Microsoft stack</li>
-        </ul></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="wrapper">
-    <div class="section-tag">Expertise</div>
-    <h2 class="section-title">Technical <em>&amp; Strategic Skills</em></h2>
-    <p class="section-sub">A broad stack spanning modern cloud infrastructure, AI tooling, full stack development, and enterprise learning strategy.</p>
-    <div class="skills-layout">
-      <div>
-        <div class="skill-group-title">AI &amp; Emerging Tech</div>
-        <div class="skill-pills">
-          <span class="pill highlight">GenAI</span><span class="pill highlight">AI Agents</span><span class="pill highlight">GitHub Copilot</span><span class="pill highlight">Agentic AI</span><span class="pill">Databricks</span><span class="pill">Responsible AI</span><span class="pill">TDD Automation</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-title">Cloud &amp; Infrastructure</div>
-        <div class="skill-pills">
-          <span class="pill highlight">Microsoft Azure</span><span class="pill">Azure App Service</span><span class="pill">Azure DevOps</span><span class="pill">Cloud Migration</span><span class="pill">ASP.NET Core</span><span class="pill">CI/CD Pipelines</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-title">Data Engineering</div>
-        <div class="skill-pills">
-          <span class="pill">Data Pipelines</span><span class="pill">Databricks</span><span class="pill">Data Strategy</span><span class="pill">Analytics</span><span class="pill">Data Architecture</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-group-title">Program &amp; Learning Strategy</div>
-        <div class="skill-pills">
-          <span class="pill highlight">Enterprise L&amp;D</span><span class="pill">Curriculum Design</span><span class="pill">Assessment Frameworks</span><span class="pill">Program Governance</span><span class="pill">Stakeholder Management</span><span class="pill">EdTech</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="wrapper">
-    <div class="section-tag">Credentials</div>
-    <h2 class="section-title">Certifications &amp; <em>Learning</em></h2>
-    <p class="section-sub">Continuous development across technology, leadership, and design thinking.</p>
-    <div class="cert-grid">
-      <div class="cert-card"><div class="cert-issuer">Microsoft</div><div class="cert-name">MTA: HTML5 Application Development Fundamentals</div></div>
-      <div class="cert-card"><div class="cert-issuer">Microsoft</div><div class="cert-name">MTA: Web Development Fundamentals</div></div>
-      <div class="cert-card"><div class="cert-issuer">LinkedIn Learning</div><div class="cert-name">The Six Morning Habits of High Performers</div></div>
-      <div class="cert-card"><div class="cert-issuer">Professional Development</div><div class="cert-name">Design Thinking: Customer Experience</div></div>
-      <div class="cert-card"><div class="cert-issuer">Leadership</div><div class="cert-name">Building Self-Confidence</div></div>
-      <div class="cert-card" style="border-color:rgba(200,169,110,0.25);background:rgba(200,169,110,0.04)">
-        <div class="cert-issuer" style="color:var(--green)">In Progress</div>
-        <div class="cert-name">Executive MBA — Leadership, Strategy &amp; Business Decision-Making</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="wrapper">
-    <div class="section-tag">Get In Touch</div>
-    <h2 class="section-title">Let's Build <em>Something Together</em></h2>
-    <p class="section-sub">Whether you're looking for a consulting partner, an enterprise program SME, or exploring strategic collaboration — I'd love to hear from you.</p>
-    <div class="contact-inner">
-      <div class="contact-info">
-        <a href="mailto:parth.shukla1989@gmail.com" class="contact-item">
-          <span class="contact-item-icon">✉️</span>
-          <div><div class="contact-item-label">Email</div><div class="contact-item-val">parth.shukla1989@gmail.com</div></div>
-        </a>
-        <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="contact-item">
-          <span class="contact-item-icon">💼</span>
-          <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">linkedin.com/in/parth-shukla-09205239</div></div>
-        </a>
-        <a href="https://www.self.so/parth-Shukla-SME" target="_blank" class="contact-item">
-          <span class="contact-item-icon">🌐</span>
-          <div><div class="contact-item-label">Portfolio</div><div class="contact-item-val">self.so/parth-Shukla-SME</div></div>
-        </a>
-        <div class="contact-item" style="cursor:default">
-          <span class="contact-item-icon">📍</span>
-          <div><div class="contact-item-label">Location</div><div class="contact-item-val">Greater Delhi Area, India · Remote Available</div></div>
-        </div>
-      </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Priya Mehta" required /></div>
-        <div class="form-group"><label>Company / Organisation</label><input type="text" placeholder="e.g. TechSME Pvt. Ltd." /></div>
-        <div class="form-group">
-          <label>I'm interested in</label>
-          <select>
-            <option>Cloud &amp; Azure Consulting</option>
-            <option>GenAI &amp; AI Adoption</option>
-            <option>Enterprise Learning Design</option>
-            <option>Full Stack Advisory</option>
-            <option>Strategic Partnership</option>
-            <option>Investor Discussion</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project, challenge, or opportunity..."></textarea></div>
-        <button type="submit" class="btn-gold" style="border:none;cursor:pointer;justify-content:center;">Send Message →</button>
-        <p id="form-msg" style="font-size:0.82rem;color:var(--green);display:none;margin-top:4px;">✅ Thanks! I'll be in touch within 24 hours.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="wrapper">
-    <div class="footer-inner">
-      <div class="footer-name">Parth Shukla</div>
-      <div class="footer-copy">© 2025 · SME &amp; Technology Consultant · Greater Delhi, India</div>
-      <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/parth-shukla-09205239/" target="_blank" class="social-btn" title="LinkedIn">in</a>
-        <a href="mailto:parth.shukla1989@gmail.com" class="social-btn" title="Email">@</a>
-        <a href="https://www.self.so/parth-Shukla-SME" target="_blank" class="social-btn" title="Portfolio">↗</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<footer><div class="wrap">
+  <span>© 2026 Parth Shukla · AI Transformation Lead</span>
+  <span>Built from JSON with a little help from Claude · last updated 25 Nov 2026</span>
+</div></footer>
 
 <script>
-  function handleSubmit(e) {
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const msg = document.getElementById('form-msg');
-    msg.style.display = 'block';
-    e.target.reset();
-    setTimeout(() => { msg.style.display = 'none'; }, 5000);
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.service-card, .tl-item, .cert-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
+    var f = new FormData(e.target);
+    var subject = 'Website enquiry: ' + f.get('topic') + (f.get('company') ? ' (' + f.get('company') + ')' : '');
+    var body = f.get('message') + '\n\n' + f.get('name') + (f.get('company') ? '\n' + f.get('company') : '');
+    window.location.href = 'mailto:parth.shukla1989@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 </script>
 </body>

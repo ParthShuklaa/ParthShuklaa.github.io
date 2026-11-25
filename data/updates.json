@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-11-25",
+    "platform": "github",
+    "title": "Shipped: AI Adoption Readiness Check",
+    "summary": "Project 1 of my weekly Claude build series: a 15-question assessment that writes a 90-day AI rollout roadmap.",
+    "url": "https://github.com/ParthShuklaa/ai-adoption-readiness-check"
+  },
+  {
+    "date": "2026-11-24",
+    "platform": "certification",
+    "title": "Microsoft Certified: AI Transformation Leader (AB-731)",
+    "summary": "Passed with 887/1000. The lesson: AI adoption is a people project with a technology component.",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/"
+  }
+]
