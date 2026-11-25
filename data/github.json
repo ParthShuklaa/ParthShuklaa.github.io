@@ -1,1 +1,21 @@
-{ "generatedAt": null, "repos": [] }
+{
+  "generatedAt": "2026-11-25T09:13:17.070Z",
+  "repos": [
+    {
+      "name": "ai-adoption-readiness-check",
+      "url": "https://github.com/ParthShuklaa/ai-adoption-readiness-check",
+      "description": "Answer 15 questions, get an AI adoption readiness score and a 90-day Copilot / Claude rollout roadmap. Built with Claude API + Next.js.",
+      "pushedAt": "2026-11-25T07:59:44Z",
+      "stars": 0,
+      "topics": [
+        "ai-adoption",
+        "ai-transformation",
+        "anthropic",
+        "change-management",
+        "claude",
+        "microsoft-365-copilot",
+        "nextjs"
+      ]
+    }
+  ]
+}
