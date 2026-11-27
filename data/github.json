@@ -1,12 +1,26 @@
 {
-  "generatedAt": "2026-11-26T02:50:20.614Z",
+  "generatedAt": "2026-11-27T02:49:59.434Z",
   "repos": [
+    {
+      "name": "trainer-skills-for-claude",
+      "url": "https://github.com/ParthShuklaa/trainer-skills-for-claude",
+      "description": "Open-source Claude Agent Skills for L&D teams and technical trainers",
+      "pushedAt": "2026-11-26T13:07:26Z",
+      "stars": 0,
+      "topics": [
+        "claude",
+        "claude-skills",
+        "jupyter",
+        "pandas",
+        "training"
+      ]
+    },
     {
       "name": "ai-adoption-readiness-check",
       "url": "https://github.com/ParthShuklaa/ai-adoption-readiness-check",
       "description": "Answer 15 questions, get an AI adoption readiness score and a 90-day Copilot / Claude rollout roadmap. Built with Claude API + Next.js.",
       "pushedAt": "2026-11-25T07:59:44Z",
-      "stars": 0,
+      "stars": 1,
       "topics": [
         "ai-adoption",
         "ai-transformation",
